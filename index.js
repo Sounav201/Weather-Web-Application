@@ -67,7 +67,11 @@ function DisplayResults(weather ) {
      if(weather.weather[0].main==="Clear")
       { document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1541898153-89683fcd5cc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')";
        console.log("Clear sky image  deployed.")}; 
-
+       
+    if(weather.weather[0].main==="Thunderstorm")
+    {document.body.style.backgroundImage="url('https://images.unsplash.com/photo-1584269655525-c2ec535de1d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')" ;    
+    console.log("Thunderstorm image deployed")};
+    
 
     let hilow=document.querySelector('.hi-low');
     hilow.innerText=`${Math.round(weather.main.temp_min)}°C  / ${Math.round(weather.main.temp_max)}°C`;
